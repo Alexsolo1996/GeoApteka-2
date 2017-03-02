@@ -1,9 +1,8 @@
-
 package Tests;
 
 import Pages.GeoAptekaStartPage;
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.*;
+import org.testng.annotations.Test;
 
 public class SortTestForStartPage extends BaseTest {
 
@@ -14,7 +13,8 @@ public class SortTestForStartPage extends BaseTest {
         String text = list.getCountOfApteks();
         list.selectFromTheListForTimeDesc();
         String text1 = list.getCountOfApteks();
-        Assert.assertTrue("Количество аптек не совпадает после сортировки", text.equals(text1));
+        Assert.assertEquals(list.returnTextFromSelect(),"time desc");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
     }
 
     @Test
@@ -24,18 +24,20 @@ public class SortTestForStartPage extends BaseTest {
         String text = list.getCountOfApteks();
         list.selectFromTheListForOstatokDesc();
         String text1 = list.getCountOfApteks();
-        Assert.assertTrue("Количество аптек не совпадает после сортировки", text.equals(text1));
+        Assert.assertEquals(list.returnTextFromSelect(),"quant desc");
+        Assert.assertTrue(text.equals(text1), "Количество аптек не совпадает после сортировки");
 
     }
 
     @Test
-    public void sortForPriceDescending(){
+    public void sortForPriceDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
         list.clickOnAptekaTab();
         String text = list.getCountOfApteks();
         list.selectFromTheListForPriceDesc();
         String text1 = list.getCountOfApteks();
-        Assert.assertTrue("Количество аптек не совпадает после сортировки", text.equals(text1));
+        Assert.assertEquals(list.returnTextFromSelect(),"price desc");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
     }
 
     @Test
@@ -45,7 +47,8 @@ public class SortTestForStartPage extends BaseTest {
         String text = list.getCountOfApteks();
         list.selectFromTheListForPriceAsc();
         String text1 = list.getCountOfApteks();
-        Assert.assertTrue("Количество аптек не совпадает после сортировки", text.equals(text1));
+        Assert.assertEquals(list.returnTextFromSelect(),"price asc");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
     }
 
     @Test
@@ -55,7 +58,8 @@ public class SortTestForStartPage extends BaseTest {
         String text = list.getCountOfApteks();
         list.selectFromTheListForOstatokAsc();
         String text1 = list.getCountOfApteks();
-        Assert.assertTrue("Количество аптек не совпадает после сортировки", text.equals(text1));
+        Assert.assertEquals(list.returnTextFromSelect(),"quant asc");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
     }
 
     @Test
@@ -65,7 +69,8 @@ public class SortTestForStartPage extends BaseTest {
         String text = list.getCountOfApteks();
         list.selectFromTheListForTimeAsc();
         String text1 = list.getCountOfApteks();
-        Assert.assertTrue("Количество аптек не совпадает после сортировки", text.equals(text1));
+        Assert.assertEquals(list.returnTextFromSelect(),"time asc");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
     }
 
     @Test

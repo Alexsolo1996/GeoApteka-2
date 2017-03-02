@@ -10,26 +10,29 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class SuppMethod extends BaseTest
 {
+    protected static WebDriverWait wait = new WebDriverWait(driver,5);
+
     public SuppMethod(WebDriver driver) {
         this.driver = driver;
-       // this.driver = driver;
     }
 
     public WebElement initObject(String xpath){
-        WebElement el = driver.findElement(By.xpath(xpath));
+        WebElement el = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
         return el;
     }
 
     public void click(String xpath){
-        driver.findElement(By.xpath(xpath)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(xpath)))).click();
     }
 
     public void sendDate(String xpath,String mess){
-        driver.findElement(By.xpath(xpath)).sendKeys(mess);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath)))).sendKeys(mess);
     }
-
-    public WebDriver getDriver(WebDriver driver){
-        return this.driver = driver;
+    public void searchElem(String xpath){
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
+    }
+    public void searchElemts(String xpath){
+        driver.findElements(By.xpath(xpath));
     }
 
     /*@Parameterized.Parameters
@@ -46,4 +49,16 @@ public class SuppMethod extends BaseTest
         SortTestForStartPage.class,
         ShowListOfAptekas.class
     })*/
+    /* <suite name="Suite1">
+        <test name="exampletest1">
+            <classes>
+                <class name="Tests.ShowListOfAptekas" />
+            </classes>
+        </test>
+        <test name="exampletest2">
+            <classes>
+                <class name="Tests.SortTestForStartPage" />
+            </classes>
+        </test>
+    </suite>*/
 }

@@ -1,6 +1,4 @@
-
 package Pages;
-
 
 import SuppMethod.SuppMethod;
 import Tests.BaseTest;
@@ -16,6 +14,12 @@ public class GeoAptekaStartPage extends BaseTest
     String countAptek = "//div[@class = \"summary\"]";
     String xpathShowWorkHours = "//div[@class = \"pharmacy_title_working has-list\"]";
     String xpathForTabApteka = "//a[@href = \"#table\"]";
+    String xpathForList = "//div[@class = \"items\"]";
+    String xpathForRezhymRaboty = "//div[@class = \"pharmacy_title_working has-list\"]";
+    String xpathForAdressApteka = "//div[@class = \"pharmacy_title_adress\"]";
+    String xpathForCountTovara = "//div[@class = \"drug_quant\"]";
+    String xpathForPriceTovara = "//div[@class = \"drug_prive\"]";
+    String xpathForDistance = "//div[@class = \"dist onfoot\"]";
 
     public GeoAptekaStartPage()
     {
@@ -78,5 +82,33 @@ public class GeoAptekaStartPage extends BaseTest
     public String getCountOfApteks(){
         SuppMethod method = new SuppMethod(driver);
         return method.initObject(countAptek).getText();
+    }
+    public void presentOfListWithApteka(){
+        SuppMethod method = new SuppMethod(driver);
+        method.searchElem(xpathForList);
+    }
+    public void presentOfWorkingHours(){
+        SuppMethod method = new SuppMethod(driver);
+        method.searchElemts(xpathForRezhymRaboty);
+    }
+    public void presentOfAdressApteka(){
+        SuppMethod method = new SuppMethod(driver);
+        method.searchElemts(xpathForAdressApteka);
+    }
+    public void presentOfPriceAndCountTovara(){
+        SuppMethod method = new SuppMethod(driver);
+        method.searchElemts(xpathForCountTovara);
+        method.searchElemts(xpathForPriceTovara);
+    }
+    public void presentOfDistance(){
+        SuppMethod method = new SuppMethod(driver);
+        method.searchElemts(xpathForDistance);
+    }
+    public String returnTextFromSelect(){
+        SuppMethod method = new SuppMethod(driver);
+        String option = method.initObject(xpathForSelectOption).getAttribute("value");
+        String direction = method.initObject(xpathForSelectDirection).getAttribute("value");
+        String s = option +" "+ direction;
+        return s;
     }
 }
