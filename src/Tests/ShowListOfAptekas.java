@@ -1,6 +1,7 @@
 package Tests;
 
 import Pages.GeoAptekaStartPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
@@ -11,10 +12,11 @@ public class ShowListOfAptekas extends BaseTest{
         GeoAptekaStartPage page = new GeoAptekaStartPage();
         page.clickOnAptekaTab();
         page.presentOfListWithApteka();
-        page.presentOfWorkingHours();
-        page.presentOfAdressApteka();
-        page.presentOfPriceAndCountTovara();
-        page.presentOfDistance();
+        Assert.assertEquals(page.countElemWithWorkingHours(),page.countOfFoundItems());
+        Assert.assertEquals(page.countElemWithAdressApteka(),page.countOfFoundItems());
+        Assert.assertEquals(page.countElemWithCountTovara(),page.countOfFoundItems());
+        Assert.assertEquals(page.countElemWithPrice(),page.countOfFoundItems());
+        Assert.assertEquals(page.countElemWithDistance(),page.countOfFoundItems());
     }
 }
 

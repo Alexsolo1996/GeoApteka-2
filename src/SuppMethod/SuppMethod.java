@@ -4,6 +4,9 @@ import Tests.BaseTest;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.util.ArrayList;
 
 /**
  * Created by user on 2/23/17.
@@ -31,34 +34,19 @@ public class SuppMethod extends BaseTest
     public void searchElem(String xpath){
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
     }
-    public void searchElemts(String xpath){
-        driver.findElements(By.xpath(xpath));
+    public String searchElemts(String xpath){
+        ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
+        String count = list.size()+" результатов.";
+        return count;
     }
-
-    /*@Parameterized.Parameters
-    public static Collection<Object[]> data(){
-        Object [][]data = new Object[][]{{"https://morrion.nabu.soft.cn.ua"},{"https://morrion.ru.nabu.soft.cn.ua"}};
-        return Arrays.asList(data);
+    public String searchElemts1(String xpath){
+        ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
+        int c = list.size() - 5;
+        String count = c + " результатов.";
+        return count;
     }
-    public BaseTest(String url){
-        this.url = url;
-    }*/
-
-    /*@RunWith(Suite.class)
-    @Suite.SuiteClasses({
-        SortTestForStartPage.class,
-        ShowListOfAptekas.class
-    })*/
-    /* <suite name="Suite1">
-        <test name="exampletest1">
-            <classes>
-                <class name="Tests.ShowListOfAptekas" />
-            </classes>
-        </test>
-        <test name="exampletest2">
-            <classes>
-                <class name="Tests.SortTestForStartPage" />
-            </classes>
-        </test>
-    </suite>*/
+    public String searchElem1(String countFoundItems) {
+        String str = driver.findElement(By.xpath(countFoundItems)).getText();
+        return str;
+    }
 }

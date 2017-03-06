@@ -18,8 +18,9 @@ public class GeoAptekaStartPage extends BaseTest
     String xpathForRezhymRaboty = "//div[@class = \"pharmacy_title_working has-list\"]";
     String xpathForAdressApteka = "//div[@class = \"pharmacy_title_adress\"]";
     String xpathForCountTovara = "//div[@class = \"drug_quant\"]";
-    String xpathForPriceTovara = "//div[@class = \"drug_prive\"]";
+    String xpathForPriceTovara = "//div[@class = \"drug_price\"]";
     String xpathForDistance = "//div[@class = \"dist onfoot\"]";
+    String countFoundItems = "//div[@class = \"summary\"]";
 
     public GeoAptekaStartPage()
     {
@@ -87,22 +88,25 @@ public class GeoAptekaStartPage extends BaseTest
         SuppMethod method = new SuppMethod(driver);
         method.searchElem(xpathForList);
     }
-    public void presentOfWorkingHours(){
+    public String countElemWithWorkingHours(){
         SuppMethod method = new SuppMethod(driver);
-        method.searchElemts(xpathForRezhymRaboty);
+        return method.searchElemts(xpathForRezhymRaboty);
     }
-    public void presentOfAdressApteka(){
+    public String countElemWithAdressApteka(){
         SuppMethod method = new SuppMethod(driver);
-        method.searchElemts(xpathForAdressApteka);
+        return method.searchElemts(xpathForAdressApteka);
     }
-    public void presentOfPriceAndCountTovara(){
+    public String countElemWithCountTovara(){
         SuppMethod method = new SuppMethod(driver);
-        method.searchElemts(xpathForCountTovara);
-        method.searchElemts(xpathForPriceTovara);
+        return method.searchElemts(xpathForCountTovara);
     }
-    public void presentOfDistance(){
+    public String countElemWithPrice(){
         SuppMethod method = new SuppMethod(driver);
-        method.searchElemts(xpathForDistance);
+        return method.searchElemts(xpathForPriceTovara);
+    }
+    public String countElemWithDistance(){
+        SuppMethod method = new SuppMethod(driver);
+        return method.searchElemts1(xpathForDistance);
     }
     public String returnTextFromSelect(){
         SuppMethod method = new SuppMethod(driver);
@@ -110,5 +114,9 @@ public class GeoAptekaStartPage extends BaseTest
         String direction = method.initObject(xpathForSelectDirection).getAttribute("value");
         String s = option +" "+ direction;
         return s;
+    }
+    public String countOfFoundItems(){
+        SuppMethod method = new SuppMethod(driver);
+        return method.searchElem1(countFoundItems);
     }
 }
