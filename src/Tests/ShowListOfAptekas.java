@@ -17,6 +17,7 @@ public class ShowListOfAptekas extends BaseTest{
         Assert.assertEquals(page.countElemWithCountTovara(),page.countOfFoundItems());
         Assert.assertEquals(page.countElemWithPrice(),page.countOfFoundItems());
         Assert.assertEquals(page.countElemWithDistance(),page.countOfFoundItems());
+        userLogger.info("Количество найденных аптек(с параметрами цена/дистанция/количество,адрес,время работы) совпадает с отображаемым числом");
     }
 }
 

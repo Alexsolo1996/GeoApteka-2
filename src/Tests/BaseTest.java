@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.TestNG;
 import org.testng.annotations.*;
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +15,8 @@ public class BaseTest{
     String searchBoxXpath = "//div[@id = \"s2id_search_select\"]";
     String searchInputBoxXpath = ".//*[@id='select2-drop']/div/input";
     String url = "https://morrion.nabu.soft.cn.ua";
-    final Logger userLogger = LogManager.getLogger(LogManager.class.getName());
+    static final Logger userLogger = LogManager.getLogger(Logger.class.getName());
+
 
     @BeforeClass()
     public  void setUp() throws Exception {
