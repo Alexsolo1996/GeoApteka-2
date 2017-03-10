@@ -1,0 +1,134 @@
+{
+  "time" : {
+    "start" : 1489128907082,
+    "stop" : 1489128918880,
+    "duration" : 11798
+  },
+  "testSuites" : [ {
+    "uid" : "ab06f77aa47a91e9",
+    "name" : "GeoApteka : ListOfApteka",
+    "title" : "GeoApteka : ListOfApteka",
+    "time" : {
+      "start" : 1489128907082,
+      "stop" : 1489128909880,
+      "duration" : 2798
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "6e550d02307e9e1a",
+      "name" : "receiveListOfAptek",
+      "title" : "Receive list of aptek",
+      "time" : {
+        "start" : 1489128907082,
+        "stop" : 1489128909880,
+        "duration" : 2798
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  }, {
+    "uid" : "85f1f6f0779019e5",
+    "name" : "GeoApteka : Sort",
+    "title" : "GeoApteka : Sort",
+    "time" : {
+      "start" : 1489128914265,
+      "stop" : 1489128918880,
+      "duration" : 4615
+    },
+    "statistic" : {
+      "total" : 7,
+      "passed" : 7,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "4fffc675d417dca",
+      "name" : "showWorkHours",
+      "title" : "Show work hours",
+      "time" : {
+        "start" : 1489128914265,
+        "stop" : 1489128916292,
+        "duration" : 2027
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "bd4e26768af931ff",
+      "name" : "sortForOstatokAscending",
+      "title" : "Sort for ostatok ascending",
+      "time" : {
+        "start" : 1489128916293,
+        "stop" : 1489128916767,
+        "duration" : 474
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "a556755815e21ea8",
+      "name" : "sortForOstatokDescending",
+      "title" : "Sort for ostatok descending",
+      "time" : {
+        "start" : 1489128916768,
+        "stop" : 1489128917015,
+        "duration" : 247
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "ba0ecc904326c8ee",
+      "name" : "sortForPriceAscending",
+      "title" : "Sort for price ascending",
+      "time" : {
+        "start" : 1489128917016,
+        "stop" : 1489128917722,
+        "duration" : 706
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "51c8858e8d3c77a8",
+      "name" : "sortForPriceDescending",
+      "title" : "Sort for price descending",
+      "time" : {
+        "start" : 1489128917723,
+        "stop" : 1489128917946,
+        "duration" : 223
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "c01e33d74e16e0aa",
+      "name" : "sortForTimeAscending",
+      "title" : "Sort for time ascending",
+      "time" : {
+        "start" : 1489128917948,
+        "stop" : 1489128918558,
+        "duration" : 610
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "372ee84e6ca25083",
+      "name" : "sortForTimeDescending",
+      "title" : "Sort for time descending",
+      "time" : {
+        "start" : 1489128918559,
+        "stop" : 1489128918880,
+        "duration" : 321
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}
