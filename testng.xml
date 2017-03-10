@@ -1,13 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="GeoApteka">
 
-    <test name="ListOfApteka">
+    <test name="Проверка списка аптек">
         <classes>
             <class name="Tests.ShowListOfAptekas" />
         </classes>
     </test>
 
-    <test name="Sort">
+    <test name="Сортировка аптек по различным признакам">
         <classes>
             <class name="Tests.SortTestForStartPage" />
         </classes>
