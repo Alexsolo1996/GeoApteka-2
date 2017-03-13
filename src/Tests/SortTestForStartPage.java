@@ -3,9 +3,11 @@ package Tests;
 import Pages.GeoAptekaStartPage;
 import org.testng.*;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Step;
 
 public class SortTestForStartPage extends BaseTest {
 
+    @Step("Сортировка времени в пути по убыванию")
     @Test
     public void sortForTimeDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -19,6 +21,7 @@ public class SortTestForStartPage extends BaseTest {
         userLogger.info("Сортировка аптек по времени в пути по убыванию прошла успешно");
     }
 
+    @Step("Сортировка остатка по убыванию")
     @Test
     public void sortForOstatokDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -33,6 +36,7 @@ public class SortTestForStartPage extends BaseTest {
 
     }
 
+    @Step("Сортировка цены по убыванию")
     @Test
     public void sortForPriceDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -46,6 +50,7 @@ public class SortTestForStartPage extends BaseTest {
         userLogger.info("Сортировка аптек по цене по убыванию прошла успешно");
     }
 
+    @Step("Сортировка цены по возростанию")
     @Test
     public void sortForPriceAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -59,6 +64,7 @@ public class SortTestForStartPage extends BaseTest {
         userLogger.info("Сортировка аптек по цене по возростанию прошла успешно");
     }
 
+    @Step("Сортировка остатка по возростанию")
     @Test
     public void sortForOstatokAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -72,6 +78,7 @@ public class SortTestForStartPage extends BaseTest {
         userLogger.info("Сортировка аптек по остатку по возрастанию прошла успешно");
     }
 
+    @Step("Сортировка времени по возростанию")
     @Test
     public void sortForTimeAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -85,6 +92,7 @@ public class SortTestForStartPage extends BaseTest {
         userLogger.info("Сортировка аптек по времени в пути по возрастанию прошла успешно");
     }
 
+    @Step("Отображение рабочых часов")
     @Test
     public void showWorkHours() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();

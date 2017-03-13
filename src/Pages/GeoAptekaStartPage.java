@@ -2,8 +2,11 @@ package Pages;
 
 import SuppMethod.SuppMethod;
 import Tests.BaseTest;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import ru.yandex.qatools.allure.annotations.Attachment;
 
 
 public class GeoAptekaStartPage extends BaseTest
@@ -118,5 +121,9 @@ public class GeoAptekaStartPage extends BaseTest
     public String countOfFoundItems(){
         SuppMethod method = new SuppMethod(driver);
         return method.searchElem1(countFoundItems);
+    }
+    @Attachment(value = "{0}", type = "image/png")
+    public byte[] attachScreenshotAs(String imageName) {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 }

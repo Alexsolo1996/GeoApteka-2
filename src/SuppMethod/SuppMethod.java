@@ -4,6 +4,7 @@ import Tests.BaseTest;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.allure.annotations.Attachment;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -38,12 +39,14 @@ public class SuppMethod extends BaseTest
     public String searchElemts(String xpath){
         ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
         String count = String.valueOf(list.size());
+        userLogger.info("actual "+count);
         return count;
     }
     public String searchElemts1(String xpath){
         ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
         int c = list.size() - 5;
         String count = String.valueOf(c);
+        userLogger.info("actual "+count);
         return count;
     }
     public String searchElem1(String countFoundItems) {
@@ -57,6 +60,7 @@ public class SuppMethod extends BaseTest
             res = String.valueOf(result);
             start = matcher.end();
         }
+        userLogger.info("expected "+res);
         return res;
     }
 }

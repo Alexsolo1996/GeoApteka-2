@@ -15,7 +15,7 @@ public class BaseTest{
     String searchBoxXpath = "//div[@id = \"s2id_search_select\"]";
     String searchInputBoxXpath = ".//*[@id='select2-drop']/div/input";
     String url = "https://morrion.nabu.soft.cn.ua";
-    static final Logger userLogger = LogManager.getLogger(Logger.class.getName());
+    public static final Logger userLogger = LogManager.getLogger(Logger.class.getName());
 
 
     @BeforeClass()
