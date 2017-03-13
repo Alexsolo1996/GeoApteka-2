@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 public class SortTestForStartPage extends BaseTest {
 
     @Test
-    public void sortForTimeDescending(){
+    public void sortForTimeDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
         list.clickOnAptekaTab();
         String text = list.getCountOfApteks();
         list.selectFromTheListForTimeDesc();
+        Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"time desc");
         Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
@@ -19,11 +20,12 @@ public class SortTestForStartPage extends BaseTest {
     }
 
     @Test
-    public void sortForOstatokDescending(){
+    public void sortForOstatokDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
         list.clickOnAptekaTab();
         String text = list.getCountOfApteks();
         list.selectFromTheListForOstatokDesc();
+        Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"quant desc");
         Assert.assertTrue(text.equals(text1), "Количество аптек не совпадает после сортировки");
@@ -37,6 +39,7 @@ public class SortTestForStartPage extends BaseTest {
         list.clickOnAptekaTab();
         String text = list.getCountOfApteks();
         list.selectFromTheListForPriceDesc();
+        Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"price desc");
         Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
@@ -44,11 +47,12 @@ public class SortTestForStartPage extends BaseTest {
     }
 
     @Test
-    public void sortForPriceAscending(){
+    public void sortForPriceAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
         list.clickOnAptekaTab();
         String text = list.getCountOfApteks();
         list.selectFromTheListForPriceAsc();
+        Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"price asc");
         Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
@@ -56,11 +60,12 @@ public class SortTestForStartPage extends BaseTest {
     }
 
     @Test
-    public void sortForOstatokAscending(){
+    public void sortForOstatokAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
         list.clickOnAptekaTab();
         String text = list.getCountOfApteks();
         list.selectFromTheListForOstatokAsc();
+        Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"quant asc");
         Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
@@ -68,11 +73,12 @@ public class SortTestForStartPage extends BaseTest {
     }
 
     @Test
-    public void sortForTimeAscending(){
+    public void sortForTimeAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
         list.clickOnAptekaTab();
         String text = list.getCountOfApteks();
         list.selectFromTheListForTimeAsc();
+        Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"time asc");
         Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
