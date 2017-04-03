@@ -17,7 +17,7 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"time desc");
-        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки времени в пути по убыванию");
         userLogger.info("Сортировка аптек по времени в пути по убыванию прошла успешно");
     }
 
@@ -31,7 +31,7 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"quant desc");
-        Assert.assertTrue(text.equals(text1), "Количество аптек не совпадает после сортировки");
+        Assert.assertTrue(text.equals(text1), "Количество аптек не совпадает после сортировки остатка по убыванию");
         userLogger.info("Сортировка аптек по остатку по убыванию прошла успешно");
 
     }
@@ -46,7 +46,7 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"price desc");
-        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки цены по убыванию");
         userLogger.info("Сортировка аптек по цене по убыванию прошла успешно");
     }
 
@@ -60,7 +60,7 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"price asc");
-        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки цены по возрастанию");
         userLogger.info("Сортировка аптек по цене по возростанию прошла успешно");
     }
 
@@ -74,7 +74,7 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"quant asc");
-        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки остатка по возрастанию");
         userLogger.info("Сортировка аптек по остатку по возрастанию прошла успешно");
     }
 
@@ -88,7 +88,7 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         String text1 = list.getCountOfApteks();
         Assert.assertEquals(list.returnTextFromSelect(),"time asc");
-        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки");
+        Assert.assertTrue(text.equals(text1),"Количество аптек не совпадает после сортировки времени в пути по возрастанию");
         userLogger.info("Сортировка аптек по времени в пути по возрастанию прошла успешно");
     }
 
