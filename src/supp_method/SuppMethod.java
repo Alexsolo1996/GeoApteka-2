@@ -1,40 +1,35 @@
 package supp_method;
 
-import tests.BaseTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static tests.BaseTest.driver;
+
 /**
  * Created by user on 2/23/17.
  */
-public class SuppMethod extends BaseTest
+public class SuppMethod
 {
     String res;
-    protected static WebDriverWait wait = new WebDriverWait(driver,5);
-
-    public SuppMethod(WebDriver driver) {
-        this.driver = driver;
-    }
-
+    public static final Logger userLogger = LogManager.getLogger(Logger.class.getName());
     public WebElement initObject(String xpath){
-        WebElement el = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
+        WebElement el = driver.findElement(By.xpath(xpath));
         return el;
     }
 
     public void click(String xpath){
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(xpath)))).click();
+        driver.findElement(By.xpath(xpath)).click();
     }
 
     public void sendDate(String xpath,String mess){
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath)))).sendKeys(mess);
+        driver.findElement(By.xpath(xpath)).sendKeys(mess);
     }
     public void searchElem(String xpath){
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(xpath))));
+        driver.findElement(By.xpath(xpath));
     }
 
     //Получение общего количества элементов с переданным локатором
