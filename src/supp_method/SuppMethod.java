@@ -3,6 +3,8 @@ package supp_method;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
+import org.testng.Assert;
+
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,14 +26,31 @@ public class SuppMethod
     }
 
     public void click(String xpath){
-        driver.findElement(By.xpath(xpath)).click();
+        try {
+            driver.findElement(By.xpath(xpath)).click();
+        }
+        catch (Exception e){
+            Assert.fail("Элемент не найден или недоступен");
+        }
+
     }
 
     public void sendDate(String xpath,String mess){
-        driver.findElement(By.xpath(xpath)).sendKeys(mess);
+        try {
+            driver.findElement(By.xpath(xpath)).sendKeys(mess);
+        }
+        catch (Exception e){
+            Assert.fail("Элемент не найден или недоступен");
+        }
+
     }
     public void searchElem(String xpath){
-        driver.findElement(By.xpath(xpath));
+        try {
+            driver.findElement(By.xpath(xpath));
+        }
+        catch (NoSuchElementException e){
+            Assert.fail("Элемент не найден");
+        }
     }
 
     //Получение общего количества элементов с переданным локатором
