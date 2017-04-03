@@ -16,6 +16,8 @@ public class SuppMethod
 {
     String res;
     public static final Logger userLogger = LogManager.getLogger(Logger.class.getName());
+    public String searchBoxXpath = "//div[@id = \"s2id_search_select\"]";
+    public String searchInputBoxXpath = ".//*[@id='select2-drop']/div/input";
     public WebElement initObject(String xpath){
         WebElement el = driver.findElement(By.xpath(xpath));
         return el;

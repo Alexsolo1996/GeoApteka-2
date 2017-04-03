@@ -10,8 +10,6 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest extends SuppMethod{
 
     public static WebDriver driver;
-    String searchBoxXpath = "//div[@id = \"s2id_search_select\"]";
-    String searchInputBoxXpath = ".//*[@id='select2-drop']/div/input";
     String url = "https://morrion.nabu.soft.cn.ua";
 
     @BeforeClass()
