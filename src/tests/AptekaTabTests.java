@@ -1,11 +1,11 @@
-package Tests;
+package tests;
 
-import Pages.GeoAptekaStartPage;
+import pages.GeoAptekaStartPage;
 import org.testng.*;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Step;
 
-public class SortTestForStartPage extends BaseTest {
+public class AptekaTabTests extends BaseTest {
 
     @Step("Сортировка времени в пути по убыванию")
     @Test

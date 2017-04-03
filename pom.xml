@@ -27,7 +27,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.14</version>
                 <configuration>
-                    <suiteXmlFiles><!-- Задаём набор тестов с помощью файла тестнг -->
+                    <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <testFailureIgnore>false</testFailureIgnore>
@@ -61,11 +61,6 @@
             <version>3.0.1</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.7</version>
@@ -74,11 +69,6 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>junit5-engine</artifactId>
-            <version>5.0.0-ALPHA</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -91,7 +81,7 @@
             <artifactId>testng</artifactId>
             <version>6.10</version>
         </dependency>
-        <dependency><!-- Подключение аллюра -->
+        <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-testng-adaptor</artifactId>
             <version>${allure.version}</version>
@@ -104,7 +94,7 @@
         </dependency>
     </dependencies>
 
-    <reporting><!-- Плагин для формирования отчёта -->
+    <reporting>
         <excludeDefaults>true</excludeDefaults>
         <plugins>
             <plugin>

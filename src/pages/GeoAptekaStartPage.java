@@ -1,7 +1,7 @@
-package Pages;
+package pages;
 
-import SuppMethod.SuppMethod;
-import Tests.BaseTest;
+import supp_method.SuppMethod;
+import tests.BaseTest;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -93,23 +93,23 @@ public class GeoAptekaStartPage extends BaseTest
     }
     public String countElemWithWorkingHours(){
         SuppMethod method = new SuppMethod(driver);
-        return method.searchElemts(xpathForRezhymRaboty);
+        return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForRezhymRaboty);
     }
     public String countElemWithAdressApteka(){
         SuppMethod method = new SuppMethod(driver);
-        return method.searchElemts(xpathForAdressApteka);
+        return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForAdressApteka);
     }
     public String countElemWithCountTovara(){
         SuppMethod method = new SuppMethod(driver);
-        return method.searchElemts(xpathForCountTovara);
+        return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForCountTovara);
     }
     public String countElemWithPrice(){
         SuppMethod method = new SuppMethod(driver);
-        return method.searchElemts(xpathForPriceTovara);
+        return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForPriceTovara);
     }
     public String countElemWithDistance(){
         SuppMethod method = new SuppMethod(driver);
-        return method.searchElemts1(xpathForDistance);
+        return method.searchAllElementsThatPresenceOnTabForDistance(xpathForDistance);
     }
     public String returnTextFromSelect(){
         SuppMethod method = new SuppMethod(driver);
@@ -120,7 +120,7 @@ public class GeoAptekaStartPage extends BaseTest
     }
     public String countOfFoundItems(){
         SuppMethod method = new SuppMethod(driver);
-        return method.searchElem1(countFoundItems);
+        return method.searchElemThatShowsHowMuchAptekasFoundForExpectedResult(countFoundItems);
     }
     @Attachment(value = "{0}", type = "image/png")
     public byte[] attachScreenshotAs(String imageName) {

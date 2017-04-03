@@ -3,13 +3,13 @@
 
     <test name="Проверка списка аптек">
         <classes>
-            <class name="Tests.ShowListOfAptekas" />
+            <class name="tests.ShowListOfAptekas" />
         </classes>
     </test>
 
     <test name="Сортировка аптек по различным признакам">
         <classes>
-            <class name="Tests.SortTestForStartPage" />
+            <class name="tests.AptekaTabTests" />
         </classes>
     </test>
 </suite>
