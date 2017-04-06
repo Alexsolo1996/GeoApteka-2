@@ -13,7 +13,7 @@ public class BaseTest extends SuppMethod{
     String url = "https://morrion.nabu.soft.cn.ua";
 
     @BeforeClass()
-    public  void setUp() throws Exception {
+    public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver","resources/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -26,7 +26,7 @@ public class BaseTest extends SuppMethod{
     }
 
     @AfterClass
-    public  void tearDown() throws Exception {
+    public void tearDown() throws Exception {
         driver.quit();
     }
 }

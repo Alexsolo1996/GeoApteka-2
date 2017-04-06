@@ -24,6 +24,7 @@ public class GeoAptekaStartPage extends SuppMethod
     String xpathForPriceTovara = "//div[@class = \"drug_price\"]";
     String xpathForDistance = "//div[@class = \"dist onfoot\"]";
     String countFoundItems = "//div[@class = \"summary\"]";
+    String xpathForFindApteka = "//div[@class = \"pharmacy_detale\"]";
 
     public GeoAptekaStartPage()
     {
@@ -54,6 +55,7 @@ public class GeoAptekaStartPage extends SuppMethod
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
         sel1.selectByVisibleText("убыванию");
     }
+
     public void selectFromTheListForOstatokAsc(){
         SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
@@ -61,6 +63,7 @@ public class GeoAptekaStartPage extends SuppMethod
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
         sel1.selectByVisibleText("возрастанию");
     }
+
     public void selectFromTheListForPriceAsc(){
         SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
@@ -68,6 +71,7 @@ public class GeoAptekaStartPage extends SuppMethod
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
         sel1.selectByVisibleText("возрастанию");
     }
+
     public void selectFromTheListForTimeAsc(){
         SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
@@ -75,42 +79,51 @@ public class GeoAptekaStartPage extends SuppMethod
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
         sel1.selectByVisibleText("возрастанию");
     }
+
     public void clickOnAptekaTab(){
         SuppMethod method = new SuppMethod();
         method.click(xpathForTabApteka);
     }
+
     public void clickOnWorkingHours(){
         SuppMethod method = new SuppMethod();
         method.click(xpathShowWorkHours);
-    }
-    public String getCountOfApteks(){
-        SuppMethod method = new SuppMethod();
-        return method.initObject(countAptek).getText();
     }
     public void presentOfListWithApteka(){
         SuppMethod method = new SuppMethod();
         method.searchElem(xpathForList);
     }
+
+    public String getArrayFromCountOfAptekas(){
+        SuppMethod method = new SuppMethod();
+        return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForFindApteka);
+    }
+
     public String getCountElemWithWorkingHours(){
         SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForRezhymRaboty);
     }
+
     public String getCountElemWithAdressApteka(){
         SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForAdressApteka);
     }
+
     public String getCountElemWithCountTovara(){
         SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForCountTovara);
     }
+
     public String getCountElemWithPrice(){
         SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForPriceTovara);
     }
+
     public String getCountElemWithDistance(){
         SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForDistance(xpathForDistance);
     }
+
     public String returnTextFromSelect(){
         SuppMethod method = new SuppMethod();
         String option = method.initObject(xpathForSelectOption).getAttribute("value");
@@ -118,10 +131,12 @@ public class GeoAptekaStartPage extends SuppMethod
         String s = option +" "+ direction;
         return s;
     }
+
     public String getCountOfFoundItems(){
         SuppMethod method = new SuppMethod();
         return method.searchElemThatShowsHowMuchAptekasFoundForExpectedResult(countFoundItems);
     }
+
     @Attachment(value = "{0}", type = "image/png")
     public byte[] attachScreenshotAs(String imageName) {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
