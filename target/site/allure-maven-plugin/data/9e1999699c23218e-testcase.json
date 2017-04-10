@@ -1,0 +1,68 @@
+{
+  "uid" : "9e1999699c23218e",
+  "name" : "sortForOstatokDescending",
+  "title" : "Sort for ostatok descending",
+  "time" : {
+    "start" : 1491829261430,
+    "stop" : 1491829262132,
+    "duration" : 702
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : {
+    "name" : "APTSORT-05",
+    "url" : "APTSORT-05"
+  },
+  "suite" : {
+    "uid" : "c4f0c73ec27e07f0",
+    "name" : "GeoApteka : Сортировка аптек по различным признакам",
+    "title" : "GeoApteka : Сортировка аптек по различным признакам"
+  },
+  "steps" : [ {
+    "name" : "sortForOstatokDescending",
+    "title" : "Сортировка остатка по убыванию",
+    "time" : {
+      "start" : 1491829261431,
+      "stop" : 1491829262132,
+      "duration" : 701
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "testId",
+    "value" : "APTSORT-05"
+  }, {
+    "name" : "host",
+    "value" : "user-P5K"
+  }, {
+    "name" : "thread",
+    "value" : "29720@user-P5K.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "GeoApteka : Сортировка аптек по различным признакам"
+  }, {
+    "name" : "suite-title",
+    "value" : "GeoApteka : Сортировка аптек по различным признакам"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}

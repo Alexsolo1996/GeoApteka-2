@@ -1,0 +1,53 @@
+{
+  "uid" : "3878e56834b272bc",
+  "name" : "checkPresenceOfElements",
+  "title" : "Check presence of elements",
+  "time" : {
+    "start" : 1491829251535,
+    "stop" : 1491829254448,
+    "duration" : 2913
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : {
+    "name" : "APT-01",
+    "url" : "APT-01"
+  },
+  "suite" : {
+    "uid" : "d769dab3e71e9542",
+    "name" : "GeoApteka : Проверка списка аптек",
+    "title" : "GeoApteka : Проверка списка аптек"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "testId",
+    "value" : "APT-01"
+  }, {
+    "name" : "host",
+    "value" : "user-P5K"
+  }, {
+    "name" : "thread",
+    "value" : "29720@user-P5K.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "GeoApteka : Проверка списка аптек"
+  }, {
+    "name" : "suite-title",
+    "value" : "GeoApteka : Проверка списка аптек"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}

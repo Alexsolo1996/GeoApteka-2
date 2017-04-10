@@ -4,12 +4,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.testng.Assert;
-
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static tests.BaseTest.driver;
+import static tests.BaseConfigTest.driver;
 
 /**
  * Created by user on 2/23/17.
@@ -18,8 +19,6 @@ public class SuppMethod
 {
     String res;
     public static final Logger userLogger = LogManager.getLogger(Logger.class.getName());
-    public String searchBoxXpath = "//div[@id = \"s2id_search_select\"]";
-    public String searchInputBoxXpath = ".//*[@id='select2-drop']/div/input";
     public WebElement initObject(String xpath){
         WebElement el = driver.findElement(By.xpath(xpath));
         return el;
@@ -61,16 +60,6 @@ public class SuppMethod
         return count;
     }
 
-    //Данный метод дублирует searchAllElementsThatPresenceOnTabForActualResult, но нужен для поиска элементов
-    //с параметром дистанция, поскольку на странице есть дополнительные 5 элементов с таким локатором
-    public String searchAllElementsThatPresenceOnTabForDistance(String xpath){
-        ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
-        int c = list.size() - 5;
-        String count = String.valueOf(c);
-        userLogger.info("actual "+count);
-        return count;
-    }
-
     public String searchElemThatShowsHowMuchAptekasFoundForExpectedResult(String countFoundItems) {
         String str = driver.findElement(By.xpath(countFoundItems)).getText();
         Pattern pattern = Pattern.compile("\\d+");
@@ -84,5 +73,50 @@ public class SuppMethod
         }
         userLogger.info("expected "+res);
         return res;
+    }
+
+    public ArrayList<String> arrayWithElementSortBySite(String xpath){
+        ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
+        ArrayList <String> arr = new ArrayList<>();
+        for(WebElement el : list){
+            arr.add(el.getText());
+        }
+        return arr;
+    }
+
+    public ArrayList<String> sortArrayAscManually(String xpath){
+        ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
+        ArrayList <String> array = new ArrayList<>();
+        for(WebElement el : list){
+            array.add(el.getText());
+        }
+        Collections.sort(array, new Comparator<String>() {
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
+        return array;
+    }
+    public ArrayList<String> sortArrayDescManyally(String xpath){
+        ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
+        ArrayList <String> array = new ArrayList<>();
+        for(WebElement el : list){
+            array.add(el.getText());
+        }
+        Collections.sort(array, new Comparator<String>() {
+            public int compare(String o2, String o1) {
+                return o1.compareTo(o2);
+            }
+        });
+        return array;
+    }
+
+    public void compareResultOfSort(ArrayList<String> arr1, ArrayList <String> arr2){
+        for(int i = 0; i < arr1.size() && arr1.size() == arr2.size(); i++){
+            if(!arr1.get(i).equals(arr2.get(i))){
+                Assert.fail("Результаты сортировок - ручная и сайта - не совпадают");
+            }
+            else continue;
+        }
     }
 }

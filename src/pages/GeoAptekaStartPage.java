@@ -1,7 +1,7 @@
 package pages;
 
 import supp_method.SuppMethod;
-import tests.BaseTest;
+import tests.BaseConfigTest;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,6 @@ public class GeoAptekaStartPage extends SuppMethod
     WebDriver driver;
     String xpathForSelectOption = ".//*[@id='order_field']";
     String xpathForSelectDirection = ".//*[@id='order_way']";
-    String countAptek = "//div[@class = \"summary\"]";
     String xpathShowWorkHours = "//div[@class = \"pharmacy_title_working has-list\"]";
     String xpathForTabApteka = "//a[@href = \"#table\"]";
     String xpathForList = "//div[@class = \"items\"]";
@@ -22,13 +21,15 @@ public class GeoAptekaStartPage extends SuppMethod
     String xpathForAdressApteka = "//div[@class = \"pharmacy_title_adress\"]";
     String xpathForCountTovara = "//div[@class = \"drug_quant\"]";
     String xpathForPriceTovara = "//div[@class = \"drug_price\"]";
-    String xpathForDistance = "//div[@class = \"dist onfoot\"]";
+    String xpathForDistance = "//div[contains(@id,'t_shop')]//div[@class='dist onfoot']";
     String countFoundItems = "//div[@class = \"summary\"]";
     String xpathForFindApteka = "//div[@class = \"pharmacy_detale\"]";
+    public String searchBoxXpath = "//div[@id = \"s2id_search_select\"]";
+    public String searchInputBoxXpath = ".//*[@id='select2-drop']/div/input";
 
     public GeoAptekaStartPage()
     {
-        this.driver = BaseTest.driver;
+        this.driver = BaseConfigTest.driver;
     }
 
     public void selectFromTheListForTimeDesc(){
@@ -121,7 +122,7 @@ public class GeoAptekaStartPage extends SuppMethod
 
     public String getCountElemWithDistance(){
         SuppMethod method = new SuppMethod();
-        return method.searchAllElementsThatPresenceOnTabForDistance(xpathForDistance);
+        return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForDistance);
     }
 
     public String returnTextFromSelect(){
@@ -135,6 +136,15 @@ public class GeoAptekaStartPage extends SuppMethod
     public String getCountOfFoundItems(){
         SuppMethod method = new SuppMethod();
         return method.searchElemThatShowsHowMuchAptekasFoundForExpectedResult(countFoundItems);
+    }
+
+    public void compareResultSortBySiteAndManuallyAsc(){
+        SuppMethod method = new SuppMethod();
+        method.compareResultOfSort(method.sortArrayAscManually(xpathForDistance), method.arrayWithElementSortBySite(xpathForDistance));
+    }
+    public void compateResultSortBySiteAndManuallyDesc(){
+        SuppMethod method = new SuppMethod();
+        method.compareResultOfSort(method.sortArrayDescManyally(xpathForDistance), method.arrayWithElementSortBySite(xpathForDistance));
     }
 
     @Attachment(value = "{0}", type = "image/png")

@@ -3,7 +3,7 @@
 
     <test name="Проверка списка аптек">
         <classes>
-            <class name="tests.PresenceOfItemsForThePharmacyTest" />
+            <class name="tests.PharmacyTabTest" />
         </classes>
     </test>
 

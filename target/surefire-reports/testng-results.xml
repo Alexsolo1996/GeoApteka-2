@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="GeoApteka" duration-ms="21499" started-at="2017-04-10T13:00:44Z" finished-at="2017-04-10T13:01:05Z">
+    <groups>
+    </groups>
+    <test name="Проверка списка аптек" duration-ms="10113" started-at="2017-04-10T13:00:44Z" finished-at="2017-04-10T13:00:54Z">
+      <class name="tests.PharmacyTabTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.PharmacyTabTest@316d30ad]" name="setUp" is-config="true" duration-ms="7018" started-at="2017-04-10T16:00:44Z" finished-at="2017-04-10T16:00:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkPresenceOfElements()[pri:0, instance:tests.PharmacyTabTest@316d30ad]" name="checkPresenceOfElements" duration-ms="2922" started-at="2017-04-10T16:00:51Z" finished-at="2017-04-10T16:00:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPresenceOfElements -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.PharmacyTabTest@316d30ad]" name="tearDown" is-config="true" duration-ms="81" started-at="2017-04-10T16:00:54Z" finished-at="2017-04-10T16:00:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.PharmacyTabTest -->
+    </test> <!-- Проверка списка аптек -->
+    <test name="Сортировка аптек по различным признакам" duration-ms="11274" started-at="2017-04-10T13:00:54Z" finished-at="2017-04-10T13:01:05Z">
+      <class name="tests.AptekaTabTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="setUp" is-config="true" duration-ms="3903" started-at="2017-04-10T16:00:54Z" finished-at="2017-04-10T16:00:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="showWorkHours()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="showWorkHours" duration-ms="2034" started-at="2017-04-10T16:00:58Z" finished-at="2017-04-10T16:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showWorkHours -->
+        <test-method status="PASS" signature="sortForOstatokAscending()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="sortForOstatokAscending" duration-ms="784" started-at="2017-04-10T16:01:00Z" finished-at="2017-04-10T16:01:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortForOstatokAscending -->
+        <test-method status="PASS" signature="sortForOstatokDescending()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="sortForOstatokDescending" duration-ms="702" started-at="2017-04-10T16:01:01Z" finished-at="2017-04-10T16:01:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortForOstatokDescending -->
+        <test-method status="PASS" signature="sortForPriceAscending()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="sortForPriceAscending" duration-ms="890" started-at="2017-04-10T16:01:02Z" finished-at="2017-04-10T16:01:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortForPriceAscending -->
+        <test-method status="PASS" signature="sortForPriceDescending()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="sortForPriceDescending" duration-ms="708" started-at="2017-04-10T16:01:03Z" finished-at="2017-04-10T16:01:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortForPriceDescending -->
+        <test-method status="PASS" signature="sortForTimeAscending()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="sortForTimeAscending" duration-ms="1130" started-at="2017-04-10T16:01:03Z" finished-at="2017-04-10T16:01:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortForTimeAscending -->
+        <test-method status="PASS" signature="sortForTimeDescending()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="sortForTimeDescending" duration-ms="1051" started-at="2017-04-10T16:01:04Z" finished-at="2017-04-10T16:01:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortForTimeDescending -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.AptekaTabTests@7f6b57f2]" name="tearDown" is-config="true" duration-ms="66" started-at="2017-04-10T16:01:05Z" finished-at="2017-04-10T16:01:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AptekaTabTests -->
+    </test> <!-- Сортировка аптек по различным признакам -->
+  </suite> <!-- GeoApteka -->
+</testng-results>

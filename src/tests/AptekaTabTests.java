@@ -4,10 +4,12 @@ import pages.GeoAptekaStartPage;
 import org.testng.*;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Step;
+import ru.yandex.qatools.allure.annotations.TestCaseId;
 
-public class AptekaTabTests extends BaseTest {
+public class AptekaTabTests extends BaseConfigTest {
 
     @Step("Сортировка времени в пути по убыванию")
+    @TestCaseId("APTSORT-01")
     @Test
     public void sortForTimeDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -16,10 +18,12 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         Assert.assertEquals(list.returnTextFromSelect(),"time desc");
         Assert.assertEquals(list.getArrayFromCountOfAptekas(),list.getCountOfFoundItems(),"Количество аптек не совпадает после сортировки времени в пути по убыванию");
+        list.compateResultSortBySiteAndManuallyDesc();
         userLogger.info("Сортировка аптек по времени в пути по убыванию прошла успешно");
     }
 
     @Step("Сортировка остатка по убыванию")
+    @TestCaseId("APTSORT-05")
     @Test
     public void sortForOstatokDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -33,6 +37,7 @@ public class AptekaTabTests extends BaseTest {
     }
 
     @Step("Сортировка цены по убыванию")
+    @TestCaseId("APTSORT-03")
     @Test
     public void sortForPriceDescending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -45,6 +50,7 @@ public class AptekaTabTests extends BaseTest {
     }
 
     @Step("Сортировка цены по возростанию")
+    @TestCaseId("APTSORT-04")
     @Test
     public void sortForPriceAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -57,6 +63,7 @@ public class AptekaTabTests extends BaseTest {
     }
 
     @Step("Сортировка остатка по возростанию")
+    @TestCaseId("APTSORT-06")
     @Test
     public void sortForOstatokAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -69,6 +76,7 @@ public class AptekaTabTests extends BaseTest {
     }
 
     @Step("Сортировка времени по возростанию")
+    @TestCaseId("APTSORT-02")
     @Test
     public void sortForTimeAscending() throws InterruptedException {
         GeoAptekaStartPage list = new GeoAptekaStartPage();
@@ -77,6 +85,7 @@ public class AptekaTabTests extends BaseTest {
         Thread.sleep(500);
         Assert.assertEquals(list.returnTextFromSelect(),"time asc");
         Assert.assertEquals(list.getArrayFromCountOfAptekas(),list.getCountOfFoundItems(),"Количество аптек не совпадает после сортировки времени в пути по возрастанию");
+        list.compareResultSortBySiteAndManuallyAsc();
         userLogger.info("Сортировка аптек по времени в пути по возрастанию прошла успешно");
     }
 

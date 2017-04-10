@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1491832271487" stop="1491832283010" version="1.4.12" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>GeoApteka : Сортировка аптек по различным признакам</name>
+    <title>GeoApteka : Сортировка аптек по различным признакам</title>
+    <test-cases>
+        <test-case start="1491832275638" stop="1491832277567" status="passed">
+            <name>showWorkHours</name>
+            <steps>
+                <step start="1491832275664" stop="1491832277566" status="passed">
+                    <name>showWorkHours</name>
+                    <title>Отображение рабочых часов</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="host" value="user-P5K"/>
+                <label name="thread" value="2561@user-P5K.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1491832277568" stop="1491832278466" status="passed">
+            <name>sortForOstatokAscending</name>
+            <steps>
+                <step start="1491832277568" stop="1491832278466" status="passed">
+                    <name>sortForOstatokAscending</name>
+                    <title>Сортировка остатка по возростанию</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="APTSORT-06"/>
+                <label name="host" value="user-P5K"/>
+                <label name="thread" value="2561@user-P5K.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1491832278467" stop="1491832279180" status="passed">
+            <name>sortForOstatokDescending</name>
+            <steps>
+                <step start="1491832278467" stop="1491832279180" status="passed">
+                    <name>sortForOstatokDescending</name>
+                    <title>Сортировка остатка по убыванию</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="APTSORT-05"/>
+                <label name="host" value="user-P5K"/>
+                <label name="thread" value="2561@user-P5K.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1491832279182" stop="1491832280100" status="passed">
+            <name>sortForPriceAscending</name>
+            <steps>
+                <step start="1491832279184" stop="1491832280100" status="passed">
+                    <name>sortForPriceAscending</name>
+                    <title>Сортировка цены по возростанию</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="APTSORT-04"/>
+                <label name="host" value="user-P5K"/>
+                <label name="thread" value="2561@user-P5K.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1491832280101" stop="1491832280794" status="passed">
+            <name>sortForPriceDescending</name>
+            <steps>
+                <step start="1491832280102" stop="1491832280793" status="passed">
+                    <name>sortForPriceDescending</name>
+                    <title>Сортировка цены по убыванию</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="APTSORT-03"/>
+                <label name="host" value="user-P5K"/>
+                <label name="thread" value="2561@user-P5K.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1491832280795" stop="1491832281901" status="passed">
+            <name>sortForTimeAscending</name>
+            <steps>
+                <step start="1491832280795" stop="1491832281901" status="passed">
+                    <name>sortForTimeAscending</name>
+                    <title>Сортировка времени по возростанию</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="APTSORT-02"/>
+                <label name="host" value="user-P5K"/>
+                <label name="thread" value="2561@user-P5K.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1491832281902" stop="1491832282944" status="passed">
+            <name>sortForTimeDescending</name>
+            <steps>
+                <step start="1491832281902" stop="1491832282944" status="passed">
+                    <name>sortForTimeDescending</name>
+                    <title>Сортировка времени в пути по убыванию</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="APTSORT-01"/>
+                <label name="host" value="user-P5K"/>
+                <label name="thread" value="2561@user-P5K.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
