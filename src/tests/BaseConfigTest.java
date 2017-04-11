@@ -1,12 +1,12 @@
 package tests;
 
+import pages.MainPage;
 import supp_method.SuppMethod;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import java.util.concurrent.TimeUnit;
-import pages.GeoAptekaStartPage;
 
 public class BaseConfigTest extends SuppMethod{
 
@@ -20,11 +20,11 @@ public class BaseConfigTest extends SuppMethod{
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().setSize(new Dimension(1024,768));
         driver.get(url);
-        GeoAptekaStartPage page = new GeoAptekaStartPage();
-        click(page.searchBoxXpath);
-        sendDate(page.searchInputBoxXpath, "Аспирин");
+        MainPage page = new MainPage();
+        page.setTheCursorInTheInputField();
+        page.sendDataInSearchField("Аспирин");
         Thread.sleep(1000);
-        sendDate(page.searchInputBoxXpath, "'\ue007'");
+        page.pressEnterInField();
     }
 
     @AfterClass

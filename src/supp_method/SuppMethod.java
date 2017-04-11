@@ -36,6 +36,18 @@ public class SuppMethod
 
     public void sendDate(String xpath,String mess){
         try {
+            WebElement element = driver.findElement(By.xpath(xpath));
+            element.clear();
+            element.sendKeys(mess);
+        }
+        catch (Exception e){
+            Assert.fail("Элемент не найден или недоступен");
+        }
+
+    }
+
+    public void pressEnterInTextField(String xpath,String mess){
+        try {
             driver.findElement(By.xpath(xpath)).sendKeys(mess);
         }
         catch (Exception e){
@@ -43,6 +55,7 @@ public class SuppMethod
         }
 
     }
+
     public void searchElem(String xpath){
         try {
             driver.findElement(By.xpath(xpath));
@@ -117,6 +130,13 @@ public class SuppMethod
                 Assert.fail("Результаты сортировок - ручная и сайта - не совпадают");
             }
             else continue;
+        }
+    }
+    public void checkArrayForNullSize(String xpath)
+    {
+        ArrayList <WebElement> list = (ArrayList<WebElement>) driver.findElements(By.xpath(xpath));
+        if(list.size() <= 0){
+            Assert.fail("Пустой массив для xpath - " + xpath);
         }
     }
 }

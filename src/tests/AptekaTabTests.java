@@ -1,6 +1,6 @@
 package tests;
 
-import pages.GeoAptekaStartPage;
+import pages.AptekaTabPage;
 import org.testng.*;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Step;
@@ -12,7 +12,7 @@ public class AptekaTabTests extends BaseConfigTest {
     @TestCaseId("APTSORT-01")
     @Test
     public void sortForTimeDescending() throws InterruptedException {
-        GeoAptekaStartPage list = new GeoAptekaStartPage();
+        AptekaTabPage list = new AptekaTabPage();
         list.clickOnAptekaTab();
         list.selectFromTheListForTimeDesc();
         Thread.sleep(500);
@@ -26,7 +26,7 @@ public class AptekaTabTests extends BaseConfigTest {
     @TestCaseId("APTSORT-05")
     @Test
     public void sortForOstatokDescending() throws InterruptedException {
-        GeoAptekaStartPage list = new GeoAptekaStartPage();
+        AptekaTabPage list = new AptekaTabPage();
         list.clickOnAptekaTab();
         list.selectFromTheListForOstatokDesc();
         Thread.sleep(500);
@@ -40,7 +40,7 @@ public class AptekaTabTests extends BaseConfigTest {
     @TestCaseId("APTSORT-03")
     @Test
     public void sortForPriceDescending() throws InterruptedException {
-        GeoAptekaStartPage list = new GeoAptekaStartPage();
+        AptekaTabPage list = new AptekaTabPage();
         list.clickOnAptekaTab();
         list.selectFromTheListForPriceDesc();
         Thread.sleep(500);
@@ -53,7 +53,7 @@ public class AptekaTabTests extends BaseConfigTest {
     @TestCaseId("APTSORT-04")
     @Test
     public void sortForPriceAscending() throws InterruptedException {
-        GeoAptekaStartPage list = new GeoAptekaStartPage();
+        AptekaTabPage list = new AptekaTabPage();
         list.clickOnAptekaTab();
         list.selectFromTheListForPriceAsc();
         Thread.sleep(500);
@@ -66,7 +66,7 @@ public class AptekaTabTests extends BaseConfigTest {
     @TestCaseId("APTSORT-06")
     @Test
     public void sortForOstatokAscending() throws InterruptedException {
-        GeoAptekaStartPage list = new GeoAptekaStartPage();
+        AptekaTabPage list = new AptekaTabPage();
         list.clickOnAptekaTab();
         list.selectFromTheListForOstatokAsc();
         Thread.sleep(500);
@@ -79,7 +79,7 @@ public class AptekaTabTests extends BaseConfigTest {
     @TestCaseId("APTSORT-02")
     @Test
     public void sortForTimeAscending() throws InterruptedException {
-        GeoAptekaStartPage list = new GeoAptekaStartPage();
+        AptekaTabPage list = new AptekaTabPage();
         list.clickOnAptekaTab();
         list.selectFromTheListForTimeAsc();
         Thread.sleep(500);
@@ -90,9 +90,10 @@ public class AptekaTabTests extends BaseConfigTest {
     }
 
     @Step("Отображение рабочых часов")
+    @TestCaseId("APT-06")
     @Test
     public void showWorkHours() throws InterruptedException {
-        GeoAptekaStartPage list = new GeoAptekaStartPage();
+        AptekaTabPage list = new AptekaTabPage();
         list.clickOnAptekaTab();
         list.clickOnWorkingHours();
         Thread.sleep(1000);

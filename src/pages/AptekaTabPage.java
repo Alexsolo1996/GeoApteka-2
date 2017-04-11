@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
 
-public class GeoAptekaStartPage extends SuppMethod
+public class AptekaTabPage extends SuppMethod
 {
     WebDriver driver;
     String xpathForSelectOption = ".//*[@id='order_field']";
@@ -24,17 +24,17 @@ public class GeoAptekaStartPage extends SuppMethod
     String xpathForDistance = "//div[contains(@id,'t_shop')]//div[@class='dist onfoot']";
     String countFoundItems = "//div[@class = \"summary\"]";
     String xpathForFindApteka = "//div[@class = \"pharmacy_detale\"]";
-    public String searchBoxXpath = "//div[@id = \"s2id_search_select\"]";
-    public String searchInputBoxXpath = ".//*[@id='select2-drop']/div/input";
+    String xpathForAddInBasket = "//div[@class = \"btn-container store-btn-container\"]/a[@id = \"yw0\"]";
+    String xpathForBasketTab = "//a[@href = \"#receipt\"]";
+    SuppMethod method = new SuppMethod();
 
-    public GeoAptekaStartPage()
+    public AptekaTabPage()
     {
         this.driver = BaseConfigTest.driver;
     }
 
     public void selectFromTheListForTimeDesc(){
 
-        SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
         sel.selectByVisibleText("Время в пути");
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
@@ -42,7 +42,6 @@ public class GeoAptekaStartPage extends SuppMethod
     }
 
     public void selectFromTheListForPriceDesc(){
-        SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
         sel.selectByVisibleText("Цена");
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
@@ -50,7 +49,6 @@ public class GeoAptekaStartPage extends SuppMethod
     }
 
     public void selectFromTheListForOstatokDesc(){
-        SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
         sel.selectByVisibleText("Остаток");
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
@@ -58,7 +56,6 @@ public class GeoAptekaStartPage extends SuppMethod
     }
 
     public void selectFromTheListForOstatokAsc(){
-        SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
         sel.selectByVisibleText("Остаток");
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
@@ -66,7 +63,6 @@ public class GeoAptekaStartPage extends SuppMethod
     }
 
     public void selectFromTheListForPriceAsc(){
-        SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
         sel.selectByVisibleText("Цена");
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
@@ -74,59 +70,60 @@ public class GeoAptekaStartPage extends SuppMethod
     }
 
     public void selectFromTheListForTimeAsc(){
-        SuppMethod method = new SuppMethod();
         Select sel = new Select(method.initObject(xpathForSelectOption));
         sel.selectByVisibleText("Время в пути");
         Select sel1 = new Select(method.initObject(xpathForSelectDirection));
         sel1.selectByVisibleText("возрастанию");
     }
 
+    public void checkPresenceOfWorkingHours(){
+        method.checkArrayForNullSize(xpathForRezhymRaboty);
+    }
+
     public void clickOnAptekaTab(){
-        SuppMethod method = new SuppMethod();
         method.click(xpathForTabApteka);
     }
 
+    public void addToBasket(){
+        method.click(xpathForAddInBasket);
+    }
+
+    public void clickOnBasketTab(){
+        method.click(xpathForBasketTab);
+    }
+
     public void clickOnWorkingHours(){
-        SuppMethod method = new SuppMethod();
         method.click(xpathShowWorkHours);
     }
     public void presentOfListWithApteka(){
-        SuppMethod method = new SuppMethod();
         method.searchElem(xpathForList);
     }
 
     public String getArrayFromCountOfAptekas(){
-        SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForFindApteka);
     }
 
     public String getCountElemWithWorkingHours(){
-        SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForRezhymRaboty);
     }
 
     public String getCountElemWithAdressApteka(){
-        SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForAdressApteka);
     }
 
     public String getCountElemWithCountTovara(){
-        SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForCountTovara);
     }
 
     public String getCountElemWithPrice(){
-        SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForPriceTovara);
     }
 
     public String getCountElemWithDistance(){
-        SuppMethod method = new SuppMethod();
         return method.searchAllElementsThatPresenceOnTabForActualResult(xpathForDistance);
     }
 
     public String returnTextFromSelect(){
-        SuppMethod method = new SuppMethod();
         String option = method.initObject(xpathForSelectOption).getAttribute("value");
         String direction = method.initObject(xpathForSelectDirection).getAttribute("value");
         String s = option +" "+ direction;
@@ -134,16 +131,13 @@ public class GeoAptekaStartPage extends SuppMethod
     }
 
     public String getCountOfFoundItems(){
-        SuppMethod method = new SuppMethod();
         return method.searchElemThatShowsHowMuchAptekasFoundForExpectedResult(countFoundItems);
     }
 
     public void compareResultSortBySiteAndManuallyAsc(){
-        SuppMethod method = new SuppMethod();
         method.compareResultOfSort(method.sortArrayAscManually(xpathForDistance), method.arrayWithElementSortBySite(xpathForDistance));
     }
     public void compateResultSortBySiteAndManuallyDesc(){
-        SuppMethod method = new SuppMethod();
         method.compareResultOfSort(method.sortArrayDescManyally(xpathForDistance), method.arrayWithElementSortBySite(xpathForDistance));
     }
 

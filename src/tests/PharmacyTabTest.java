@@ -1,6 +1,6 @@
 package tests;
 
-import pages.GeoAptekaStartPage;
+import pages.AptekaTabPage;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.TestCaseId;
 
@@ -14,7 +14,7 @@ public class PharmacyTabTest extends BaseConfigTest {
     @Test
     @TestCaseId("APT-01")
     public void checkPresenceOfElements() throws InterruptedException, IOException {
-        GeoAptekaStartPage page = new GeoAptekaStartPage();
+        AptekaTabPage page = new AptekaTabPage();
         page.clickOnAptekaTab();
         page.presentOfListWithApteka();
         assertEquals(page.getCountElemWithWorkingHours(), page.getCountOfFoundItems(),"Количество аттрибута \"Часы работы\" не соответсвует с отображемым значением");
