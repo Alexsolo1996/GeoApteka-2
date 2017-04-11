@@ -10,7 +10,7 @@
       "broken" : 0
     },
     "stories" : [ {
-      "uid" : "84b929373f8a4bc8",
+      "uid" : "ed2d31ba10084762",
       "title" : "Without story",
       "statistic" : {
         "total" : 8,
@@ -21,90 +21,90 @@
         "broken" : 0
       },
       "testCases" : [ {
-        "uid" : "3878e56834b272bc",
+        "uid" : "9a5d0ac3ef7f9d3b",
         "name" : "checkPresenceOfElements",
         "title" : "Check presence of elements",
         "time" : {
-          "start" : 1491829251535,
-          "stop" : 1491829254448,
-          "duration" : 2913
+          "start" : 1491835098786,
+          "stop" : 1491835099909,
+          "duration" : 1123
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "b8dc99954b220085",
+        "uid" : "c548dfcab2894f9",
         "name" : "showWorkHours",
         "title" : "Show work hours",
         "time" : {
-          "start" : 1491829258610,
-          "stop" : 1491829260644,
-          "duration" : 2034
+          "start" : 1491835104200,
+          "stop" : 1491835106258,
+          "duration" : 2058
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "ac40e590f54bcd64",
+        "uid" : "b0542206d9fdcede",
         "name" : "sortForOstatokAscending",
         "title" : "Sort for ostatok ascending",
         "time" : {
-          "start" : 1491829260645,
-          "stop" : 1491829261429,
-          "duration" : 784
+          "start" : 1491835106259,
+          "stop" : 1491835107122,
+          "duration" : 863
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "9e1999699c23218e",
+        "uid" : "1bb621c5aafeb774",
         "name" : "sortForOstatokDescending",
         "title" : "Sort for ostatok descending",
         "time" : {
-          "start" : 1491829261430,
-          "stop" : 1491829262132,
-          "duration" : 702
+          "start" : 1491835107123,
+          "stop" : 1491835107831,
+          "duration" : 708
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "e0c07dda34509d59",
+        "uid" : "54ff6f54fc7653a7",
         "name" : "sortForPriceAscending",
         "title" : "Sort for price ascending",
         "time" : {
-          "start" : 1491829262133,
-          "stop" : 1491829263023,
-          "duration" : 890
+          "start" : 1491835107832,
+          "stop" : 1491835108738,
+          "duration" : 906
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "809fdea02f86b12f",
+        "uid" : "31cbdb8b6b504905",
         "name" : "sortForPriceDescending",
         "title" : "Sort for price descending",
         "time" : {
-          "start" : 1491829263024,
-          "stop" : 1491829263731,
-          "duration" : 707
+          "start" : 1491835108739,
+          "stop" : 1491835109437,
+          "duration" : 698
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "a0983779466275c2",
+        "uid" : "64f976010222aca5",
         "name" : "sortForTimeAscending",
         "title" : "Sort for time ascending",
         "time" : {
-          "start" : 1491829263732,
-          "stop" : 1491829264863,
-          "duration" : 1131
+          "start" : 1491835109438,
+          "stop" : 1491835110616,
+          "duration" : 1178
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "f8b19fd7968562be",
+        "uid" : "e42b33aadd66f86b",
         "name" : "sortForTimeDescending",
         "title" : "Sort for time descending",
         "time" : {
-          "start" : 1491829264863,
-          "stop" : 1491829265914,
-          "duration" : 1051
+          "start" : 1491835110617,
+          "stop" : 1491835111659,
+          "duration" : 1042
         },
         "severity" : "NORMAL",
         "status" : "PASSED"

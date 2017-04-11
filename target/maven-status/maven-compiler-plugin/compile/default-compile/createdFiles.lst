@@ -1,8 +1,8 @@
 tests/PharmacyTabTest.class
 supp_method/SuppMethod.class
 supp_method/SuppMethod$2.class
+tests/BaseConfigTest.class
 supp_method/SuppMethod$1.class
 pages/GeoAptekaStartPage.class
 tests/AptekaTabTests.class
-tests/BaseTest.class
 pages/MainPage.class

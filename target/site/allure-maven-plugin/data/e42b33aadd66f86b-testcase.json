@@ -1,11 +1,11 @@
 {
-  "uid" : "a0983779466275c2",
-  "name" : "sortForTimeAscending",
-  "title" : "Sort for time ascending",
+  "uid" : "e42b33aadd66f86b",
+  "name" : "sortForTimeDescending",
+  "title" : "Sort for time descending",
   "time" : {
-    "start" : 1491829263732,
-    "stop" : 1491829264863,
-    "duration" : 1131
+    "start" : 1491835110617,
+    "stop" : 1491835111659,
+    "duration" : 1042
   },
   "summary" : {
     "attachments" : 0,
@@ -16,21 +16,21 @@
   "severity" : "NORMAL",
   "status" : "PASSED",
   "testId" : {
-    "name" : "APTSORT-02",
-    "url" : "APTSORT-02"
+    "name" : "APTSORT-01",
+    "url" : "APTSORT-01"
   },
   "suite" : {
-    "uid" : "c4f0c73ec27e07f0",
+    "uid" : "27b9e68c0120383d",
     "name" : "GeoApteka : Сортировка аптек по различным признакам",
     "title" : "GeoApteka : Сортировка аптек по различным признакам"
   },
   "steps" : [ {
-    "name" : "sortForTimeAscending",
-    "title" : "Сортировка времени по возростанию",
+    "name" : "sortForTimeDescending",
+    "title" : "Сортировка времени в пути по убыванию",
     "time" : {
-      "start" : 1491829263732,
-      "stop" : 1491829264862,
-      "duration" : 1130
+      "start" : 1491835110617,
+      "stop" : 1491835111659,
+      "duration" : 1042
     },
     "summary" : {
       "attachments" : 0,
@@ -44,13 +44,13 @@
   "issues" : [ ],
   "labels" : [ {
     "name" : "testId",
-    "value" : "APTSORT-02"
+    "value" : "APTSORT-01"
   }, {
     "name" : "host",
     "value" : "user-P5K"
   }, {
     "name" : "thread",
-    "value" : "29720@user-P5K.main(1)"
+    "value" : "9994@user-P5K.main(1)"
   }, {
     "name" : "suite-name",
     "value" : "GeoApteka : Сортировка аптек по различным признакам"

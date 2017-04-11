@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="10.22" tests="8" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="8.644" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -59,12 +59,12 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="checkPresenceOfElements" classname="tests.PharmacyTabTest" time="2.923"/>
-  <testcase name="showWorkHours" classname="tests.AptekaTabTests" time="2.035"/>
-  <testcase name="sortForOstatokAscending" classname="tests.AptekaTabTests" time="0.784"/>
-  <testcase name="sortForOstatokDescending" classname="tests.AptekaTabTests" time="0.699"/>
-  <testcase name="sortForPriceAscending" classname="tests.AptekaTabTests" time="0.89"/>
-  <testcase name="sortForPriceDescending" classname="tests.AptekaTabTests" time="0.707"/>
-  <testcase name="sortForTimeAscending" classname="tests.AptekaTabTests" time="1.131"/>
-  <testcase name="sortForTimeDescending" classname="tests.AptekaTabTests" time="1.051"/>
+  <testcase name="checkPresenceOfElements" classname="tests.PharmacyTabTest" time="1.189"/>
+  <testcase name="showWorkHours" classname="tests.AptekaTabTests" time="2.059"/>
+  <testcase name="sortForOstatokAscending" classname="tests.AptekaTabTests" time="0.864"/>
+  <testcase name="sortForOstatokDescending" classname="tests.AptekaTabTests" time="0.707"/>
+  <testcase name="sortForPriceAscending" classname="tests.AptekaTabTests" time="0.906"/>
+  <testcase name="sortForPriceDescending" classname="tests.AptekaTabTests" time="0.698"/>
+  <testcase name="sortForTimeAscending" classname="tests.AptekaTabTests" time="1.178"/>
+  <testcase name="sortForTimeDescending" classname="tests.AptekaTabTests" time="1.043"/>
 </testsuite>

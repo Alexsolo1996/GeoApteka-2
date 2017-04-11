@@ -1,11 +1,11 @@
 {
-  "uid" : "3878e56834b272bc",
+  "uid" : "9a5d0ac3ef7f9d3b",
   "name" : "checkPresenceOfElements",
   "title" : "Check presence of elements",
   "time" : {
-    "start" : 1491829251535,
-    "stop" : 1491829254448,
-    "duration" : 2913
+    "start" : 1491835098786,
+    "stop" : 1491835099909,
+    "duration" : 1123
   },
   "summary" : {
     "attachments" : 0,
@@ -20,7 +20,7 @@
     "url" : "APT-01"
   },
   "suite" : {
-    "uid" : "d769dab3e71e9542",
+    "uid" : "fd90afaa2e8d10ad",
     "name" : "GeoApteka : Проверка списка аптек",
     "title" : "GeoApteka : Проверка списка аптек"
   },
@@ -35,7 +35,7 @@
     "value" : "user-P5K"
   }, {
     "name" : "thread",
-    "value" : "29720@user-P5K.main(1)"
+    "value" : "9994@user-P5K.main(1)"
   }, {
     "name" : "suite-name",
     "value" : "GeoApteka : Проверка списка аптек"
